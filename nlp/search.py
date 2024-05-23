@@ -2,6 +2,7 @@ import sqlite3
 from nlp.preprocess import preprocess_text
 from config import DATABASE
 
+
 def search_comments(query):
     conn = sqlite3.connect(DATABASE)
     c = conn.cursor()
@@ -19,5 +20,6 @@ def search_comments(query):
 
     results = sorted(results, key=lambda x: x[1], reverse=True)
     return results
+
 
 # Path: nlp/preprocess.py
