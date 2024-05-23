@@ -18,9 +18,10 @@ def main():
     )
     parser.add_argument(
         "subreddit", type=str, help="The name of the subreddit to crawl"
+        "E.g, input MachineLearning for r/MachineLearning."
     )
     parser.add_argument(
-        "--limit", type=int, default=100, help="The number of comments to fetch"
+        "--limit", type=int, default=1000, help="The number of comments to fetch"
     )
     args = parser.parse_args()
 
