@@ -1,10 +1,6 @@
-from scraper import fetch_data
-from nlp import search
-from web import app
+from scraper.fetch_data import fetch_and_store
 
 if __name__ == "__main__":
-    # Fetch data from Mattermost
-    fetch_data.fetch_and_store()
-
-    # Start the web application
-    app.run()
+    # Fetch data from a subreddit
+    fetch_and_store(subreddit_name="python", limit=100)
+    print("Data fetched and stored successfully.")

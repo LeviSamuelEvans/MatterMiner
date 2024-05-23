@@ -1,7 +1,6 @@
 # Configuration variables
 
-API_URL = "https://your-mattermost-instance.com/api/v4"
-ACCESS_TOKEN = "YOUR_ACCESS_TOKEN"
-TEAM_ID = "YOUR_TEAM_ID"
-CHANNEL_ID = "YOUR_CHANNEL_ID"
-DATABASE = "mattermost.db"
+REDDIT_CLIENT_ID = "xxK4pV4thiZKC65Naw6lhg"  # Replace with your actual client ID
+REDDIT_CLIENT_SECRET = "RTmZNsaTsrap_xYsIkNePkwhk1qnWg"  # Replace with your actual client secret
+REDDIT_USER_AGENT = "MatterMiner by /u/HiggsOG"  # Replace with your actual user agent
+DATABASE = "reddit.db"
