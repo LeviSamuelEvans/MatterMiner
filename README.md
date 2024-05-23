@@ -1,6 +1,6 @@
 # RedditMiner
 
-RedditMiner is a tool for crawling and analyzing comments from Reddit subreddits. It uses the Reddit API to fetch comments, stores them in an SQLite database, and provides a web interface for querying and analysing the data using natural language processing (NLP).
+RedditMiner is a tool for crawling and analysing comments from Reddit subreddits. It uses the Reddit API to fetch comments, stores them in an SQLite database, and provides a web interface for querying and analysing the data using natural language processing (NLP).
 
 ## Features
 
