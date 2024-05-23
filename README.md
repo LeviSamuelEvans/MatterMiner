@@ -1,6 +1,6 @@
 # RedditMiner
 
-RedditMiner is a tool for crawling and analyzing comments from Reddit subreddits. It uses the Reddit API to fetch comments, stores them in an SQLite database, and provides a web interface for querying and analyzing the data using natural language processing (NLP).
+RedditMiner is a tool for crawling and analyzing comments from Reddit subreddits. It uses the Reddit API to fetch comments, stores them in an SQLite database, and provides a web interface for querying and analysing the data using natural language processing (NLP).
 
 ## Features
 
@@ -14,7 +14,7 @@ RedditMiner is a tool for crawling and analyzing comments from Reddit subreddits
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/RedditMiner.git
+    git clone https://github.com/LeviSamuelEvans/RedditMiner
     cd RedditMiner
     ```
 
@@ -48,3 +48,30 @@ REDDIT_CLIENT_ID = "your_client_id"
 REDDIT_CLIENT_SECRET = "your_client_secret"
 REDDIT_USER_AGENT = "your_user_agent"
 DATABASE = "reddit.db"
+```
+
+Replace your_client_id, your_client_secret, and your_user_agent with your Reddit API credentials.
+
+## Usage
+
+### Crawling comments
+To crawl comments from a specified subreddit and store them in the database, run:
+
+```python
+
+python main.py subreddit_name --limit 100
+
+
+```
+Replace subreddit_name with the name of the subreddit you want to crawl and --limit with the number of comments to fetch (default is 100).
+
+### Running a web interface
+
+To start the web interface, run:
+
+```
+python web/app.py
+
+```
+
+Open your browser and navigate to http://127.0.0.1:5000/ to use the interface.

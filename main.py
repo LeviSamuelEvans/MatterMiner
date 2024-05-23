@@ -1,6 +1,14 @@
+import argparse
 from scraper.fetch_data import fetch_and_store
 
-if __name__ == "__main__":
-    # Fetch data from a subreddit
-    fetch_and_store(subreddit_name="python", limit=100)
+def main():
+    parser = argparse.ArgumentParser(description="Crawl a subreddit and store comments.")
+    parser.add_argument("subreddit", type=str, help="The name of the subreddit to crawl")
+    parser.add_argument("--limit", type=int, default=100, help="The number of comments to fetch")
+    args = parser.parse_args()
+
+    fetch_and_store(subreddit_name=args.subreddit, limit=args.limit)
     print("Data fetched and stored successfully.")
+
+if __name__ == "__main__":
+    main()
