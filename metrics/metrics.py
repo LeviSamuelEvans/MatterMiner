@@ -1,6 +1,7 @@
 import sqlite3
 from datetime import datetime
 import matplotlib.pyplot as plt
+from nlp.preprocess import analyze_sentiment
 
 DATABASE = "reddit.db"
 
@@ -43,6 +44,16 @@ def get_comments_over_time():
     timestamps = [datetime.utcfromtimestamp(row[0]) for row in c.fetchall()]
     conn.close()
     return timestamps
+
+def get_sentiment_distribution():
+    conn = sqlite3.connect(DATABASE)
+    c = conn.cursor()
+    c.execute("SELECT body FROM comments")
+    comments = [row[0] for row in c.fetchall()]
+    conn.close()
+
+    sentiments = [analyze_sentiment(comment)['compound'] for comment in comments]
+    return sentiments
 
 def plot_comments_over_time():
     timestamps = get_comments_over_time()
