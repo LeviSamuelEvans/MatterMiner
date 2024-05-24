@@ -1,4 +1,3 @@
 MMenv/*
 
-reddit.db: reddit.sql
-    sqlite3 reddit.db < reddit.sql
+reddit.db

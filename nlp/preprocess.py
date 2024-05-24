@@ -1,7 +1,7 @@
 import spacy
 
-nlp = spacy.load("en_core_web_sm")
-
+# larger model with word vectors
+nlp = spacy.load('en_core_web_md')
 
 def preprocess_text(text):
     return nlp(text)
