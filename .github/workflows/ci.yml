@@ -1,10 +1,9 @@
 name: CI
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -25,6 +24,11 @@ jobs:
         python -m venv venv
         source venv/bin/activate
         pip install -r requirements.txt
+
+    - name: Download SpaCy model
+      run: |
+        source venv/bin/activate
+        python -m spacy download en_core_web_md
 
     - name: Set PYTHONPATH
       run: |
